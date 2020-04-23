@@ -20,7 +20,7 @@
         "name": "HourStepping"
       }
     },
-    "defaultLanguage": "en-US"
+    "defaultLanguage": "de-DE"
   },
   "devDependencies": {
     "@fitbit/sdk": "~4.1.0"

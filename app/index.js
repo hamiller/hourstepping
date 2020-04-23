@@ -7,7 +7,8 @@ import { minuteHistory, today } from "user-activity";
 import { locale } from "user-settings";
 import { battery } from "power";
 import { display } from "display";
-
+import { gettext } from "i18n";
+import * as messaging from "messaging";
 
 // Update the clock every minute
 clock.granularity = "seconds";
@@ -26,7 +27,7 @@ const day = document.getElementById("day");
 const bat = document.getElementById("bat");
 const blut = document.getElementById("blut");
 
-const days = ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag", "Sonntag"];
+const days = ["mo", "di", "mi", "do", "fr", "sa", "so"];
 let colonDisplayed = true;
 let doIt = true;
 
@@ -43,8 +44,8 @@ clock.ontick = (evt) => {
     minRight.text = `${mins%10}`
     blink();
 
-    day.text = `${days[todayDate.getDay()]}`;
-    date.text = `${todayDate.getDate()}.${todayDate.getMonth() + 1}.`;
+    day.text = `${gettext(days[todayDate.getDay()])}`;
+    date.text = `${dateFormat(todayDate)}`;
 
     bat.text = `${Math.floor(battery.chargeLevel)}%`;
 
@@ -73,6 +74,20 @@ function blink() {
   }
 }
 
+function dateFormat(date) {
+  switch (locale.language) {
+    case "de-de":
+      // 7.2.
+      return `${date.getDate()}.${date.getMonth() + 1}.`;
+    case "en-us":
+      // 2/7/
+      return `${date.getMonth() + 1}/\//${date.getDate()}/\//`;
+    default:
+      // 7/2/
+      return `${date.getDate()}/\//${date.getMonth() + 1}/\//`;
+  }
+}
+
 display.addEventListener("change", () => {
    if (display.on) {
      // start sensors
@@ -81,4 +96,13 @@ display.addEventListener("change", () => {
      // stop sensors
      doIt = false;
    }
-});
+})
+
+messaging.peerSocket.onmessage = function(evt) {
+  console.log("setting color " + evt.data.value)
+  hourLeft.style.fill = evt.data.value;
+  hourRight.style.fill = evt.data.value;
+  colon.style.fill = evt.data.value;
+  minLeft.style.fill = evt.data.value;
+  minRight.style.fill = evt.data.value;
+}

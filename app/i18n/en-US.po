@@ -1,0 +1,20 @@
+msgid "mo"
+msgstr "Monday"
+
+msgid "di"
+msgstr "Tuesday"
+
+msgid "mi"
+msgstr "Wednesday"
+
+msgid "do"
+msgstr "Thursday"
+
+msgid "fr"
+msgstr "Friday"
+
+msgid "sa"
+msgstr "Saturday"
+
+msgid "so"
+msgstr "Sunday"
