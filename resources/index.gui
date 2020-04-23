@@ -1,0 +1,16 @@
+<svg class="background">
+  <image id="stepIcon" href="steps.png" />
+  <image id="fireIcon" href="fire.png" />
+  <text id="day" />
+  <text id="date" />
+  <text id="hourLeft" />
+  <text id="hourRight" />
+  <text id="colon" />
+  <text id="minLeft" />
+  <text id="minRight" />
+  <text id="hourSteps" />
+  <text id="daySteps" />
+  <text id="dayCal" />
+  <text id="bat" />
+  <text id="blut" />
+</svg>

@@ -1,0 +1,136 @@
+.background {
+  viewport-fill: black;
+}
+
+#blut {
+  font-size: 30;
+  text-length: 32;
+  text-anchor: start;
+  y: 10%;
+  x: 0%;
+  fill: white;
+}
+
+#bat {
+  font-size: 25;
+  text-length: 32;
+  text-anchor: start;
+  y: 10%;
+  x: 0%;
+  fill: white;
+}
+
+
+#day {
+  font-size: 30;
+  font-family: System-Bold;
+  text-length: 32;
+  text-anchor: end;
+  y: 10%;
+  x: 100%;
+  fill: white;
+}
+
+#date {
+  font-size: 30;
+  font-family: System-Bold;
+  text-length: 32;
+  text-anchor: end;
+  y: 20%;
+  x: 100%;
+  fill: white;
+}
+
+#hourLeft {
+  font-size: 160;
+  font-family: System-Bold;
+  text-length: 20;
+  text-anchor: start;
+  fill: #cba258;
+  opacity: 0.85;
+  y: 65%;
+  x: 0%;
+}
+
+#hourRight {
+  font-size: 160;
+  font-family: System-Bold;
+  text-length: 20;
+  text-anchor: middle;
+  fill: #cba258;
+  opacity: 0.85;
+  y: 65%;
+  x: 38%;
+}
+
+#colon {
+  font-size: 160;
+  font-family: System-Bold;
+  text-length: 1;
+  text-anchor: middle;
+  fill: #cba258;
+  opacity: 0.85;
+  y: 60%;
+  x: 50%;
+}
+
+
+#minLeft {
+  font-size: 160;
+  font-family: System-Bold;
+  text-length: 20;
+  text-anchor: middle;
+  fill: #cba258;
+  opacity: 0.85;
+  y: 65%;
+  x: 62%;
+}
+
+#minRight {
+  font-size: 160;
+  font-family: System-Bold;
+  text-length: 20;
+  text-anchor: end;
+  fill: #cba258;
+  opacity: 0.85;
+  y: 65%;
+  x: 100%;
+}
+
+#stepIcon {
+  height: 30;
+  width: 30;
+  x: 0%;
+  y: 82%;
+}
+
+#fireIcon {
+  height: 30;
+  width: 30;
+  x: 90%;
+  y: 81%;
+}
+#hourSteps {
+  font-size: 30;
+  text-length: 32;
+  text-anchor: start;
+  x: 11%;
+  y: 90%;
+  fill: white;
+}
+#daySteps {
+  font-size: 30;
+  text-length: 32;
+  text-anchor: start;
+  x: 11%;
+  y: 98%;
+  fill: white;
+}
+#dayCal {
+  font-size: 30;
+  text-length: 32;
+  text-anchor: end;
+  x: 89%;
+  y: 90%;
+  fill: white;
+}

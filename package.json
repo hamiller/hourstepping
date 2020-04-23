@@ -1,0 +1,28 @@
+{
+  "fitbit": {
+    "appUUID": "9717f3b5-c3d5-4c60-a42a-3f28ef141351",
+    "appType": "clockface",
+    "appDisplayName": "HourStepping",
+    "iconFile": "resources/icon.png",
+    "wipeColor": "",
+    "requestedPermissions": [
+      "access_activity",
+      "access_calendar"
+    ],
+    "buildTargets": [
+      "meson"
+    ],
+    "i18n": {
+      "en": {
+        "name": "HourStepping"
+      },
+      "de": {
+        "name": "HourStepping"
+      }
+    },
+    "defaultLanguage": "en-US"
+  },
+  "devDependencies": {
+    "@fitbit/sdk": "~4.1.0"
+  }
+}
