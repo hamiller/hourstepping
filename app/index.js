@@ -56,7 +56,12 @@ clock.ontick = (evt) => {
 
       let sum = 0;
       minuteRecords.forEach((minute, index) => {
-        sum += minute.steps;
+        if (typeof minute.steps === 'number') {
+          sum += minute.steps;
+        }
+        else {
+          sum += 0;
+        }
       });
       hourSteps.text = `${sum}`;
     }
