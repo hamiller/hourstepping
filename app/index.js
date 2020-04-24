@@ -27,7 +27,7 @@ const day = document.getElementById("day");
 const bat = document.getElementById("bat");
 const blut = document.getElementById("blut");
 
-const days = ["mo", "di", "mi", "do", "fr", "sa", "so"];
+const days = ["so", "mo", "di", "mi", "do", "fr", "sa"];
 let colonDisplayed = true;
 let doIt = true;
 
