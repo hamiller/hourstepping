@@ -8,6 +8,8 @@ let currentColor = settingsStorage.getItem(KEY_COLOR);
 
 // Settings have been changed
 settingsStorage.onchange = function(evt) {
+  console.log("save new color");
+  settingsStorage.setItem(evt.key, evt.newValue);
   sendValue(evt.key, evt.newValue);
 }
 
@@ -28,6 +30,7 @@ function sendValue(key, val) {
 function sendSettingData(data) {
   // If we have a MessageSocket, send the data to the device
   if (messaging.peerSocket.readyState === messaging.peerSocket.OPEN) {
+    console.log("Sending new color.");
     messaging.peerSocket.send(data);
   } else {
     console.log("No peerSocket connection");
